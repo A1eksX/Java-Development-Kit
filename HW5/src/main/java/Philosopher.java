@@ -48,7 +48,7 @@ public class Philosopher extends Thread {
         }
     }
 
-    public synchronized void eating() throws InterruptedException {
+    public void eating() throws InterruptedException {
         if (countEat >= MAX_COUNT_EAT){
                 hungry = false;
                 countDownLatch.countDown();
